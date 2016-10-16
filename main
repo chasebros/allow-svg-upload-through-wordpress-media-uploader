@@ -1,0 +1,20 @@
+To allow SVG upload, simply add this code to your theme’s functions.php file:
+
+PHP
+
+function cc_mime_types($mimes) {
+  $mimes['svg'] = 'image/svg+xml';
+  return $mimes;
+}
+add_filter('upload_mimes', 'cc_mime_types');
+
+
+
+
+You can add this your CSS
+
+.svg-image {
+  max-width:100%;
+  height:auto;
+  width:auto;
+}
